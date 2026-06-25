@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<h:head>
+    <title>Like Hero to Zero – Home</title>
+</h:head>
+
+<h:body>
+    <h1>Welcome to the CO₂ Tracking Application</h1>
+
+    <p>
+        This application provides transparent access to CO₂ emission data.
+        Citizens can explore global emission values, while scientists can
+        contribute new data to the system.
+    </p>
+
+    <h2>Navigation</h2>
+
+    <ul>
+        <li>
+            <h:link value="Citizen View (Public CO₂ Data)" outcome="citizen.xhtml" />
+        </li>
+        <li>
+            <h:link value="Scientist Dashboard (Data Entry)" outcome="scientist.xhtml" />
+        </li>
+        <li>
+            <h:link value="Login" outcome="login.xhtml" />
+        </li>
+    </ul>
+
+</h:body>
+</html>

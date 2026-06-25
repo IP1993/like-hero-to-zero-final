@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<h:head>
+    <title>Scientist Login</title>
+</h:head>
+
+<h:body>
+    <h1>Scientist Login</h1>
+
+    <p>
+        This login area is reserved for authorized scientific users who contribute to the
+        Like Hero To Zero sustainability project. After successful authentication,
+        researchers gain access to the protected data management interface where CO₂
+        emission entries can be added, updated, or corrected. This ensures that the
+        underlying dataset remains reliable, transparent, and scientifically valid.
+    </p>
+
+    <p>
+        Please enter your credentials to continue:
+    </p>
+
+    <!-- Error message when login fails -->
+    <h:panelGroup rendered="#{param.error eq 'true'}">
+        <p style="color:red; font-weight:bold;">
+            Invalid username or password. Please try again.
+        </p>
+    </h:panelGroup>
+
+    <h:form prependId="false">
+        <h:panelGrid columns="2" columnClasses="label,value">
+
+            <h:outputLabel for="username" value="Username:" />
+            <h:inputText id="username" value="#{loginBean.username}" required="true" />
+
+            <h:outputLabel for="password" value="Password:" />
+            <h:inputSecret id="password" value="#{loginBean.password}" required="true" />
+
+        </h:panelGrid>
+
+        <br/>
+
+        <h:commandButton value="Login" action="#{loginBean.login}" />
+    </h:form>
+
+
+    <h:messages style="color:red; margin-top:10px"/>
+</h:body>
+
+</html>

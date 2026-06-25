@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+    <title>Scientist Dashboard</title>
+</h:head>
+
+<h:body>
+
+    <!-- Access protection -->
+    <h:panelGroup rendered="#{!authBean.scientist}">
+        <h1>Access Denied</h1>
+        <p>You do not have permission to view this page.</p>
+        <h:link value="Return to Home" outcome="index.xhtml" />
+    </h:panelGroup>
+
+    <h:panelGroup rendered="#{authBean.scientist}">
+
+        <h1>Scientist Dashboard</h1>
+
+        <h2>Navigation</h2>
+        <ul>
+            <li><h:link value="Home" outcome="index.xhtml" /></li>
+            <li><h:link value="Citizen View" outcome="citizen.xhtml" /></li>
+        </ul>
+
+        <h:form>
+            <h:commandButton value="Logout" action="#{authBean.logout}" />
+        </h:form>
+
+        <h:form>
+            <h2>Add New Emission Entry</h2>
+
+            <h:panelGrid columns="2" cellpadding="5">
+
+                <h:outputLabel value="Country:" />
+                <h:selectOneMenu value="#{scientistBean.countryId}">
+                    <f:selectItems value="#{scientistBean.allCountries}"
+                                   var="c"
+                                   itemValue="#{c.id}"
+                                   itemLabel="#{c.name}" />
+                </h:selectOneMenu>
+
+                <h:outputLabel value="Year:" />
+                <h:inputText value="#{scientistBean.year}" />
+
+                <h:outputLabel value="CO₂ (tons):" />
+                <h:inputText value="#{scientistBean.co2}" />
+
+            </h:panelGrid>
+
+            <h:commandButton value="Add Entry" action="#{scientistBean.addEntry}" />
+        </h:form>
+
+        <hr/>
+
+        <h2>Existing Emission Entries</h2>
+
+        <h:dataTable value="#{scientistBean.allEmissions}" var="e" border="1">
+
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                #{e.id}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Country</f:facet>
+                #{e.country.name}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">Year</f:facet>
+                #{e.year}
+            </h:column>
+
+            <h:column>
+                <f:facet name="header">CO₂</f:facet>
+                #{e.co2}
+            </h:column>
+
+        </h:dataTable>
+
+    </h:panelGroup>
+
+</h:body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+    <title>Public CO₂ Viewer</title>
+</h:head>
+
+<h:body>
+    <h1>Public CO₂ Emission Data</h1>
+
+    <p>
+        This page provides citizens with transparent access to CO₂ emission data
+        collected from various countries. The information is retrieved directly
+        from the system’s database and updated whenever scientists add new entries.
+    </p>
+
+    <h2>Global Emission Overview</h2>
+
+    <h:dataTable value="#{citizenBean.allEmissions}" var="e" border="1">
+
+        <h:column>
+            <f:facet name="header">Country</f:facet>
+            #{e.country.name}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Year</f:facet>
+            #{e.year}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">CO₂ (tons)</f:facet>
+            #{e.co2}
+        </h:column>
+
+    </h:dataTable>
+
+    <br/>
+
+    <h:form>
+        <h:commandButton value="Back to Home" action="index.xhtml" style="margin-right:10px"/>
+        <h:commandButton value="Logout" action="#{authBean.logout}" />
+    </h:form>
+
+</h:body>
+</html>
