@@ -39,6 +39,7 @@ Die Anwendung läuft auf **Apache TomEE** und verwendet eine relationale Datenba
 
 ## Projektstruktur
 
+<img width="217" height="242" alt="image" src="https://github.com/user-attachments/assets/6e1b5c73-7c4f-42de-b580-7a4d28de8268" />
 src/main/java/com/likeherotozero
  ├── beans
  │     ├── AuthBean.java
