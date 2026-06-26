@@ -67,7 +67,8 @@ Die Benutzer müssen manuell in der Datenbank angelegt werden:
 
 | Benutzername | Passwort | Rolle      |
 |--------------|----------|------------|
-| scientist    | admi     | admin      |
+| scientist    | scientist| 1234       |
+| citizen      | citizen  | 5678       |
 
 ---
 
