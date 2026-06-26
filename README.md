@@ -39,31 +39,10 @@ Die Anwendung läuft auf **Apache TomEE** und verwendet eine relationale Datenba
 
 ## Projektstruktur
 
-<img width="217" height="242" alt="image" src="https://github.com/user-attachments/assets/6e1b5c73-7c4f-42de-b580-7a4d28de8268" />
-src/main/java/com/likeherotozero
- ├── beans
- │     ├── AuthBean.java
- │     ├── CitizenBean.java
- │     ├── LoginBean.java
- │     └── ScientistBean.java
- ├── entities
- │     ├── Country.java
- │     ├── Emission.java
- │     └── User.java
- └── startup
-       └── JPAInitBean.java
+<img width="220" height="239" alt="image" src="https://github.com/user-attachments/assets/91146a1d-9bdc-46fa-a10c-4daa6e948f2c" />
 
-src/main/resources/META-INF
- └── persistence.xml
+<img width="194" height="218" alt="image" src="https://github.com/user-attachments/assets/5c265212-55a2-45ed-bad6-fd8ad2a25349" />
 
-src/main/webapp
- ├── index.xhtml
- ├── login.xhtml
- ├── citizen.xhtml
- ├── scientist.xhtml
- └── WEB-INF
-       ├── web.xml
-       └── beans.xml
 ---
 
 ## Installation & Ausführung
