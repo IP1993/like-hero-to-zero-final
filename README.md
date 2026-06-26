@@ -41,6 +41,7 @@ Die Anwendung läuft auf **Apache TomEE** und verwendet eine relationale Datenba
 
 <img width="220" height="239" alt="image" src="https://github.com/user-attachments/assets/91146a1d-9bdc-46fa-a10c-4daa6e948f2c" />
 
+
 <img width="194" height="218" alt="image" src="https://github.com/user-attachments/assets/5c265212-55a2-45ed-bad6-fd8ad2a25349" />
 
 ---
