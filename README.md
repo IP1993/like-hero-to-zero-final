@@ -92,7 +92,3 @@ dokument.pdf
 ## Autor  
 **Iliyan Milenov Petrov (IP1993)**  
 IU Internationale Hochschule
-
-- oder eine **Version mit Badge‑Icons**  
-
-erstellen.
